@@ -1,0 +1,58 @@
+<template>
+  <div class="header" style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
+    <img src="../assets/header.png"  alt="" class="icon1"/>
+    <div style="width: 300px; padding-left: 30px; font-weight: bold; color: black; font-size: 25px" >实验语音学控件</div>
+    <div style="flex: 1"></div>
+    <div style="width: 100px">
+      <el-dropdown>
+        <span class="el-dropdown-link">
+          <el-avatar :size="30"  style="position: relative; top: 10px"></el-avatar>
+           张凯玮
+          <i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item @click="$router.push('/person')">个人信息</el-dropdown-item>
+            <el-dropdown-item @click="$router.push('/password')">修改密码</el-dropdown-item>
+            <el-dropdown-item @click="$router.push('/login')">退出系统</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+    </div>
+  </div>
+</template>
+
+    <!-- <div class="header">
+      <img src="../assets/header.png"  alt="" class="icon1"/>
+      <span class="header-name">实验语音学控件</span>
+    </div> -->
+
+
+
+<script>
+export default {
+    name: 'Header',
+}
+</script>
+
+
+<style scoped>
+/* .header {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+
+.header-name{
+    color: white;
+    font-size: 30px;    
+    color: aliceblue;
+} */
+
+.icon1{
+    height: 45px;
+    width: 50px;
+    
+}
+</style>
